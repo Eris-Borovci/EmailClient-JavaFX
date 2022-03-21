@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="700.0" maxWidth="900.0" minHeight="400.0" minWidth="600.0" prefHeight="472.0" prefWidth="746.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.HomeController">
+   <left>
+      <VBox prefHeight="446.0" prefWidth="152.0" style="-fx-padding: 0 10 0 10;" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane prefHeight="68.0" prefWidth="102.0" VBox.vgrow="NEVER">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="120.60001220703126" minHeight="10.0" prefHeight="82.40000610351562" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#openCompose" prefHeight="26.0" prefWidth="136.0" style="-fx-background-color: #2442FF;" text="Compose" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/pen.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
+            <GridPane prefHeight="112.0" prefWidth="131.0" style="-fx-padding: 20 0 0 0;" VBox.vgrow="NEVER">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="61.199981689453125" minWidth="10.0" prefWidth="24.399995803833008" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="113.20000839233398" minWidth="10.0" prefWidth="107.60000419616699" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="49.399987792968744" minHeight="10.0" prefHeight="46.20000610351562" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="80.00000610351563" minHeight="10.0" prefHeight="46.199993896484386" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#openInbox" prefHeight="42.0" prefWidth="131.0" style="-fx-background-color: transparent;" text="   Inbox" GridPane.columnIndex="1">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/inbox%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#openSent" prefHeight="26.0" prefWidth="162.0" style="-fx-background-color: transparent;" text="  Sent" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/sent.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Circle fx:id="inboxIndicator" fill="DODGERBLUE" radius="8.0" stroke="BLACK" strokeType="INSIDE" visible="false" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+                  <Circle fx:id="sentIndicator" fill="DODGERBLUE" radius="8.0" stroke="BLACK" strokeType="INSIDE" visible="false" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="255.0" prefWidth="118.0" style="-fx-padding: 0 0 20 0;" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#LogOut" style="-fx-background-color: #911717;" text="Log out" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children></VBox>
+   </left>
+   <top>
+      <HBox prefHeight="3.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar prefHeight="26.0" prefWidth="578.0" HBox.hgrow="ALWAYS">
+              <menus>
+                <Menu fx:id="accountName" mnemonicParsing="false" text="Account">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#LogOut" text="Log out" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <AnchorPane prefHeight="549.0" prefWidth="594.0" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane fx:id="MainShow" layoutX="138.0" layoutY="-3.0" prefHeight="449.0" prefWidth="594.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

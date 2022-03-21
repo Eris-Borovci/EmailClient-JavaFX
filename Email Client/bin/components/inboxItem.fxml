@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane onMouseClicked="#viewEmail" prefHeight="37.0" prefWidth="620.0" styleClass="item" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.inboxItemController">
+   <children>
+      <Label fx:id="Title" layoutX="14.0" layoutY="10.0" text="Title" />
+      <Label fx:id="From" layoutX="181.0" layoutY="11.0" text="From:" />
+      <Label fx:id="Date" layoutX="392.0" layoutY="11.0" text="Date" />
+      <Button layoutX="535.0" layoutY="6.0" mnemonicParsing="false" onAction="#deleteEmail" style="-fx-background-color: #911717;" text="Delete" textFill="WHITE" />
+   </children>
+</AnchorPane>

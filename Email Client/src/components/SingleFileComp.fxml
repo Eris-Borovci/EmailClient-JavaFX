@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="67.0" prefWidth="521.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SingleFileCompController">
+   <children>
+      <Text fx:id="fileName" layoutX="14.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filename" />
+      <Button fx:id="downloadBtn" layoutX="436.0" layoutY="21.0" mnemonicParsing="false" onAction="#download" style="-fx-background-color: #0F4370;" text="Download" textFill="WHITE" />
+   </children>
+</AnchorPane>

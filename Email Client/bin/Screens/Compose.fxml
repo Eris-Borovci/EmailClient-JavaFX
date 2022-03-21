@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="457.0" prefWidth="633.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ComposeController">
+   <children>
+      <TextField fx:id="toInp" layoutX="32.0" layoutY="14.0" prefHeight="26.0" prefWidth="350.0" promptText="To:" />
+      <TextField fx:id="titleInp" layoutX="32.0" layoutY="52.0" prefHeight="26.0" prefWidth="350.0" promptText="Title:" />
+      <TextArea fx:id="subjectInp" layoutX="32.0" layoutY="95.0" prefHeight="293.0" prefWidth="350.0" promptText="Subject:" />
+      <Button layoutX="290.0" layoutY="403.0" mnemonicParsing="false" onAction="#Send" prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: #2442FF;" text="Send" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="messageLabel" layoutX="32.0" layoutY="409.0" text="Label" visible="false" />
+      <Button layoutX="192.0" layoutY="402.0" mnemonicParsing="false" onAction="#openFileChooser" prefHeight="30.0" prefWidth="91.0" style="-fx-background-color: #2442FF;" text="Insert File" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <ListView fx:id="listFiles" layoutX="402.0" layoutY="14.0" prefHeight="374.0" prefWidth="219.0" />
+      <Button fx:id="removeItem" layoutX="529.0" layoutY="402.0" mnemonicParsing="false" onAction="#removeSelectedItem" prefHeight="30.0" prefWidth="91.0" style="-fx-background-color: #911717;" text="Remove" textFill="WHITE" visible="false">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
